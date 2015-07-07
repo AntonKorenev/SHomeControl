@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/color_primary"
+        android:gravity="center"
+        android:id="@+id/layout_toolbar">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:theme="@style/AppTheme" />
+
+        <Spinner
+            android:layout_marginRight="@dimen/view_padding"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinner_logs" />
+    </LinearLayout>
+
+    <view
+        class="android.support.v7.widget.RecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/layout_controls"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/layout_toolbar"
+        android:id="@+id/recycler_view_main"
+        android:layout_gravity="left|bottom"
+        android:visibility="visible"
+        android:nestedScrollingEnabled="true" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentStart="true"
+        android:padding="@dimen/view_padding"
+        android:id="@+id/layout_controls"
+        android:gravity="center">
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <ImageButton
+            android:layout_width="@dimen/control_button_size"
+            android:layout_height="@dimen/control_button_size"
+            android:maxHeight="@dimen/control_button_size"
+            android:maxWidth="@dimen/control_button_size"
+            android:id="@+id/image_button_temperature"
+            android:src="@mipmap/temperature_icon"
+            android:background="@color/color_primary"
+            android:padding="@dimen/view_padding"/>
+
+        <TextView
+            android:layout_width="@dimen/control_button_size"
+            android:layout_height="@dimen/control_button_size"
+            android:background="@color/color_background_text_view"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/text_temperature_view"
+            android:id="@+id/text_view_temperature"
+            android:layout_weight="1"
+            android:textColor="@color/color_text_light"
+            android:layout_gravity="center"
+            android:gravity="center" />
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <ImageButton
+            android:layout_width="@dimen/control_button_size"
+            android:layout_height="@dimen/control_button_size"
+            android:maxHeight="@dimen/control_button_size"
+            android:maxWidth="@dimen/control_button_size"
+            android:id="@+id/image_button_luminosity"
+            android:src="@mipmap/luminosity_icon"
+            android:background="@color/color_primary"
+            android:padding="@dimen/view_padding"/>
+
+        <TextView
+            android:layout_width="@dimen/control_button_size"
+            android:layout_height="@dimen/control_button_size"
+            android:background="@color/color_background_text_view"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/text_luminosity_view"
+            android:id="@+id/text_view_luminosity"
+            android:layout_weight="1"
+            android:textColor="@color/color_text_light"
+            android:layout_gravity="center"
+            android:gravity="center" />
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <ImageButton
+            android:layout_width="@dimen/control_button_size"
+            android:layout_height="@dimen/control_button_size"
+            android:maxHeight="@dimen/control_button_size"
+            android:maxWidth="@dimen/control_button_size"
+            android:id="@+id/image_button_humidity"
+            android:src="@mipmap/humidity_png"
+            android:background="@color/color_primary"
+            android:padding="@dimen/view_padding"/>
+
+        <TextView
+            android:layout_width="@dimen/control_button_size"
+            android:layout_height="@dimen/control_button_size"
+            android:background="@color/color_background_text_view"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/text_humidity_view"
+            android:id="@+id/text_view_humidity"
+            android:layout_weight="1"
+            android:textColor="@color/color_text_light"
+            android:layout_gravity="center"
+            android:gravity="center" />
+    </LinearLayout>
+
+</RelativeLayout>

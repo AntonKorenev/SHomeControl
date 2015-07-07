@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">SHomeControl</string>
 
-    <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="text_temperature_view">22°C</string>
+    <string name="text_humidity_view">80%</string>
+    <string name="text_luminosity_view">2/4</string>
 </resources>
